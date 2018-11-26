@@ -1,9 +1,9 @@
 class Revgeod < Formula
   desc "A reverse Geo lookup service written in C, accessible via HTTP and backed by OpenCage and LMDB"
   homepage "https://github.com/jpmens/revgeod/"
-  url "https://github.com/jpmens/revgeod/archive/0.1.3.tar.gz"
-  version "0.1.3"
-  sha256 "3273d8e38ac886207869d2a6806c3ad68de5f603a69b01cf2dd85be9a3c6c1f9"
+  url "https://github.com/jpmens/revgeod/archive/0.1.4.tar.gz"
+  version "0.1.4"
+  sha256 "2c732b0d83a57eba10022d8c73a520c5a7858bdf38086faa803886b25e27e636"
 
   depends_on "libmicrohttpd"
   depends_on "lmdb"
