@@ -68,8 +68,11 @@ class Revgeod < Formula
     #!/bin/sh
     # Launch script for Revgeod
 
-    #:-- You must set a valid API key
+    #:-- You must set a valid API key; you can get one at https://opencagedata.com
     export OPENCAGE_APIKEY=""
+
+    #:-- The address/port to which we bind; warning: there is no authentication of
+    #:-- any kind so limit carefully!
     export REVGEO_IP=127.0.0.1
     export REVGEO_PORT=8865
 
