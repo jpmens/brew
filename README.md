@@ -20,3 +20,7 @@ Note how the first invocation outputs a source (`s`) of `opencage` and the secon
 
 
 You can also test with `/usr/local/var/revgeod/c-mini-test.sh` which should report an address in Paris, France. (Note, this uses `jq` which we don't require in the formula; feel free to alter the example program.)
+
+## launch
+
+Either launch `/usr/local/etc/revgeod.sh` (this doesn't daemonize) or start the service with `brew services start jpmens/brew/revgeod`
