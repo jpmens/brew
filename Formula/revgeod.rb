@@ -58,6 +58,7 @@ class Revgeod < Formula
       # leave undefined if you don't want to use statsd
       # STATSDHOST="127.0.0.1"
       LMDB_DATABASE=    "/usr/local/var/revgeod/geocache/"
+      LISTEN_HOST=      "127.0.0.1"
       LISTEN_PORT=	"8865"
       LIBS=		""
     EOS
