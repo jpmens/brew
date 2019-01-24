@@ -1,8 +1,8 @@
 class Revgeod < Formula
   desc "A reverse Geo lookup service written in C, accessible via HTTP and backed by OpenCage and LMDB"
   homepage "https://github.com/jpmens/revgeod/"
-  url "https://github.com/jpmens/revgeod/archive/0.2.2.tar.gz"
-  sha256 "f0959b90bb16596d14b8e8d75e4897139b245be02f34f1c6b827906334170c7d"
+  url "https://github.com/jpmens/revgeod/archive/0.2.9.tar.gz"
+#  sha256 "f0959b90bb16596d14b8e8d75e4897139b245be02f34f1c6b827906334170c7d"
 
   depends_on "libmicrohttpd"
   depends_on "lmdb"
@@ -29,9 +29,15 @@ class Revgeod < Formula
     sbin.install "revgeod"
     chmod 0755, sbin/"revgeod"
 
-    (var/"revgeod").install "c-mini-test.sh"
+    bin.install "revgeoc"
+    chmod 0755, bin/"revgeoc"
+
+    # (var/"revgeod").install "c-mini-test.sh"
 
     doc.install "README.md"
+
+    man.mkpath
+    man1.install "revgeod.1"
 
   end
 
@@ -60,6 +66,7 @@ class Revgeod < Formula
       LMDB_DATABASE=    "/usr/local/var/revgeod/geocache/"
       LISTEN_HOST=      "127.0.0.1"
       LISTEN_PORT=	"8865"
+      INC=		""
       LIBS=		""
     EOS
   end
